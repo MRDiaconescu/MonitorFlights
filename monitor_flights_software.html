@@ -1,5 +1,4 @@
 
-
 <style>
 
 #canvas {
@@ -39,7 +38,6 @@ author: Maria Raluca Diaconescu
 This program sets the data related to flights 
 into a system and it looks for locations depending 
 on coordinates to create air traffic circuits*/
-
 
 
 
@@ -861,6 +859,12 @@ for (var item in TiedLinkedLists5) {
 }
 
 
+  
+  
+  
+  
+  
+  
 function FlightCoordinator() {
 
 this.canvas = document.querySelector('canvas').getContext('2d');
@@ -868,8 +872,6 @@ this.coordinates = [];
 this.attributes = [];
 
 }
-//var FlightCoordinator1 = new FlightCoordinator();
-
 
 
 FlightCoordinator.prototype = Object.create(TiedLinkedLists_setter_f1.prototype, {
@@ -877,9 +879,6 @@ FlightCoordinator.prototype = Object.create(TiedLinkedLists_setter_f1.prototype,
 constructor: {value: FlightCoordinator},
 
 drawLines : {value: function (p1_1, p1_2, p2_1, p2_2 ) {
-
-
-//canvas = document.querySelector('canvas').getContext('2d');
 
 canvas = FlightCoordinator1.canvas;
 
@@ -918,6 +917,7 @@ canvas.stroke();
 canvas.closePath();
 
 }},
+  
 
 drawLines_f2 : {value: function(p1_1, p1_2, p2_1, p2_2 ) {
 
@@ -941,6 +941,8 @@ canvas.stroke();
 canvas.closePath();
 
 }},
+  
+  
 
 drawLines_f5 : {value: function(p1_1, p1_2, p2_1, p2_2 ) {
 
@@ -952,9 +954,7 @@ canvas.beginPath();
 canvas.moveTo(p1_1, p1_2);
 canvas.lineTo(p2_1, p2_2);
 
-
 canvas.strokeStyle =  ' #2282f5';
-;
 
 canvas.lineWidth = 1;
 
@@ -972,13 +972,8 @@ draw_point: {value: function (p1_1, p1_2, label, color, size) {
 
 var canvas = FlightCoordinator1.canvas;
 
-
 canvas.beginPath();
-
-//color = " #2375d8 ";
-
-//size = 5;
-
+  
 canvas.fillStyle = color;
 
 var p1_1 =  Math.round(p1_1);
@@ -1006,18 +1001,15 @@ if (label) {
 canvas.closePath();
 
 }},
+  
+  
 
 display_coordinates: {value: function (p1_1, p1_2, label, color, size) {
 
 
 var canvas = FlightCoordinator1.canvas;
 
-
 canvas.beginPath();
-
-//color = " #2375d8 ";
-
-//size = 5;
 
 canvas.fillStyle = color;
 
@@ -1026,9 +1018,6 @@ var p1_1 =  Math.round(p1_1);
 var p1_2 = Math.round(p1_2);
 
 canvas.arc(p1_1, p1_2, size,0 * Math.PI, 2 * Math.PI);
-
-//FlightCoordinator1.coordinates.push([p1_1, p1_2, label]);
-
 
 canvas.fill();
 
@@ -1058,10 +1047,6 @@ var canvas = FlightCoordinator1.canvas;
 
 canvas.beginPath();
 
-//color = " #2375d8 ";
-
-//size = 5;
-
 canvas.fillStyle = color;
 
 var p1_1 =  Math.round(p1_1);
@@ -1069,9 +1054,6 @@ var p1_1 =  Math.round(p1_1);
 var p1_2 = Math.round(p1_2);
 
 canvas.arc(p1_1, p1_2, size,0 * Math.PI, 2 * Math.PI);
-
-//FlightCoordinator1.coordinates.push([p1_1, p1_2, label]);
-
 
 canvas.fill();
 
@@ -1090,7 +1072,9 @@ canvas.closePath();
 
 }},
 
- find_location: {value: function(arg1) {
+  
+  
+find_location: {value: function(arg1) {
 
 for (var item in FlightCoordinator1.coordinates) {
 
@@ -1110,6 +1094,7 @@ draw_path : {value: function(arg1, arg2) {
     FlightCoordinator1.find_location(arg2);
     FlightCoordinator1.drawLines_f2(arg1[0], arg1[1], arg2[0], arg2[1]);
 }},
+  
 
 circuit_star_model : {value: function(arg1, arg2, arg3, arg4, arg5, arg6, arg7){
 
@@ -1157,7 +1142,6 @@ var vertex6 = new Node(arg6);
 var vertex7  = new Node(arg7);
 
 
-
 var TiedLinkedLists17 =  new TiedLinkedLists_setter_f1(new TiedLinkedListsClass_var1, TiedLinkedLists.infinite_model, TiedLinkedLists.print_the_linked_list_infinite_model, TiedLinkedLists.getter, TiedLinkedListsClass_var1.setter); 
 
 
@@ -1178,19 +1162,15 @@ TiedLinkedLists17.llist.create_llist(vertex7);
 
 TiedLinkedLists17.llist.star_model();
 
-
 FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.data[0], TiedLinkedLists17.llist.head.data[1], TiedLinkedLists17.llist.head.next.data[0], TiedLinkedLists17.llist.head.next.data[1]);
-
 
 FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.next.data[0], TiedLinkedLists17.llist.head.next.data[1], TiedLinkedLists17.llist.head.next.next.data[0], TiedLinkedLists17.llist.head.next.next.data[1]);
 
 FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.next.next.data[0], TiedLinkedLists17.llist.head.next.next.data[1], TiedLinkedLists17.llist.head.next.next.next.data[0], TiedLinkedLists17.llist.head.next.next.next.data[1]);
 
-// FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.next.next.next.data[0], TiedLinkedLists17.llist.head.next.next.next.data[1], TiedLinkedLists17.llist.head.next.next.next.next.data[0], TiedLinkedLists17.llist.head.next.next.next.next.data[1]);
 
 
 FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.data[0], TiedLinkedLists17.llist.head.data[1], TiedLinkedLists17.llist.head.nextl.data[0], TiedLinkedLists17.llist.head.nextl.data[1]);
-
 
 FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.nextl.data[0], TiedLinkedLists17.llist.head.nextl.data[1], TiedLinkedLists17.llist.head.nextl.nextl.data[0], TiedLinkedLists17.llist.head.nextl.nextl.data[1]);
 
@@ -1206,7 +1186,6 @@ FlightCoordinator1.drawLines_f1(TiedLinkedLists17.llist.head.nextl.nextl.nextl.n
 }},
 
 set_distance_and_time : {value :function(arg1, arg2, distance, time, arg5, arg7){
-
 
 for (var item in FlightCoordinator1.coordinates) {
 
@@ -1226,33 +1205,32 @@ if ((arg2[0] == FlightCoordinator1.coordinates[item][0]) && (arg2[1] == FlightCo
 
 }
 
-
-
+  
  FlightCoordinator1.display_attributes(arg2[0], arg2[1], String(FlightCoordinator1.attributes[FlightCoordinator1.attributes.length-1]), '#f58f22', 5, arg5, arg7);
 
 
-
 }},
+  
 
 draw_circuit : { value :  function(arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
 
-
-FlightCoordinator1.set_distance_and_time(arg1[0], arg1[1], arg1[2], arg1[3], arg1[4], arg1[5], arg1[6]);
+FlightCoordinator1.set_distance_and_time(arg1[0], arg1[1], arg1[2], arg1[3], arg1[4], 
+  arg1[5], arg1[6]);
 
 FlightCoordinator1.set_distance_and_time(arg2[0], arg2[1], arg2[2], arg2[3], arg2[4],
-    arg2[5], arg2[6]);
+  arg2[5], arg2[6]);
 
 FlightCoordinator1.set_distance_and_time(arg3[0], arg3[1], arg3[2], arg3[3], arg3[4],
-    arg3[5], arg3[6]);
+  arg3[5], arg3[6]);
 
 FlightCoordinator1.set_distance_and_time(arg4[0], arg4[1], arg4[2], arg4[3], arg4[4],
-    arg4[5], arg4[6]);
+   arg4[5], arg4[6]);
 
 FlightCoordinator1.set_distance_and_time(arg5[0], arg5[1], arg5[2], arg5[3], arg5[4],
-arg5[5], arg5[6]);
+  arg5[5], arg5[6]);
 
 FlightCoordinator1.set_distance_and_time(arg6[0], arg6[1], arg6[2], arg6[3], arg6[4],
-    arg6[5], arg6[6]);
+   arg6[5], arg6[6]);
 
 FlightCoordinator1.set_distance_and_time(arg7[0], arg7[1], arg7[2], arg7[3], arg7[4],
     arg7[5], arg7[6]);
@@ -1284,7 +1262,6 @@ FlightCoordinator1.drawLines(-21,298,493,298);
 
 FlightCoordinator1.drawLines(-21,337,493,337);
 
-
 FlightCoordinator1.drawLines(-21,376,493,376);
 
 FlightCoordinator1.drawLines(-21,415,493,415);
@@ -1293,32 +1270,6 @@ FlightCoordinator1.drawLines(-21,454,493,454);
 
 FlightCoordinator1.drawLines(-21,493,493,493);
 
-
-
-
-
-// function drawLines_f1(p1_1, p1_2, p2_1, p2_2 ) {
-
-
-
-// var canvas = document.querySelector('canvas').getContext('2d');
-
-
-// canvas.beginPath();
-
-// canvas.moveTo(p1_1, p1_2);
-// canvas.lineTo(p2_1, p2_2);
-
-
-// canvas.strokeStyle = "#1529bf";
-
-// canvas.fill();
-
-// canvas.stroke();
-
-// canvas.closePath();
-
-// }
 
 
 FlightCoordinator1.drawLines_f1(1,25,1,492);
@@ -1341,7 +1292,6 @@ FlightCoordinator1.drawLines_f1(329,25,329,492);
 
 FlightCoordinator1.drawLines_f1(370,25,370,492);
 
-
 FlightCoordinator1.drawLines_f1(411,25,411,492);
 
 FlightCoordinator1.drawLines_f1(452,25,452,492);
@@ -1349,62 +1299,20 @@ FlightCoordinator1.drawLines_f1(452,25,452,492);
 FlightCoordinator1.drawLines_f1(493,25,493,492);
 
 
-
-
-// function draw_point(p1_1, p1_2, label, color, size) {
-
-
-// var canvas = document.querySelector('canvas').getContext('2d');
-
-
-// canvas.beginPath();
-
-// //color = " #2375d8 ";
-
-// //size = 5;
-
-// canvas.fillStyle = color;
-
-// var p1_1 =   Math.round(p1_1);
-
-// var p1_2 = Math.round(p1_2);
-
-// canvas.arc(p1_1, p1_2, size,0 * Math.PI, 2 * Math.PI);
-
-// canvas.fill();
-
-
-// if (label) {
-//             var textp1_1 = Math.round(p1_1);
-//              var textp1_2 = Math.round(p1_2 - 5);
-          
-//             canvas.font = 'Italic 12px Arial';
-//             canvas.fillStyle =  "#1158A7" ;
-//             canvas.textAlign = 'center';
-//             canvas.fillText(label, textp1_1, textp1_2);
-//         }
-
-// canvas.closePath();
-
-// }
-
-
+  
+  
+  
 FlightCoordinator1.draw_point(197, 59, "Ameland", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(95, 255, "Amsterdam", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(225, 331, "Arnhem", "#2375d8", 5);
 
-
 FlightCoordinator1.draw_point(197, 450, "Budel", "#2375d8", 5);
-
 
 FlightCoordinator1.draw_point(65, 136, "Den Helder", "#2375d8", 5);
 
-
 FlightCoordinator1.draw_point(315, 293, "Deventer", "#2375d8", 5);
-
-
 
 FlightCoordinator1.draw_point(295, 98, "Drachten", "#2375d8", 5);
 
@@ -1414,17 +1322,13 @@ FlightCoordinator1.draw_point(459, 312, "Enschede", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(379, 80, "Groningen", "#2375d8", 5);
 
-
 FlightCoordinator1.draw_point(137, 293, "Hilversum", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(360, 195, "Hoogeveen", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(182, 215, "Lelystad", "#2375d8", 5);
 
-
-
 FlightCoordinator1.draw_point(300, 470, "Maastricht" , "#2375d8", 5);
-
 
 FlightCoordinator1.draw_point(117, 157, "Middenmeer", "#2375d8", 5);
 
@@ -1432,28 +1336,22 @@ FlightCoordinator1.draw_point(55, 325, "Rotterdam", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(55, 370, "Numansdorp", "#2375d8", 5);
 
-
 FlightCoordinator1.draw_point(443, 136, "Stadskanaal", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(346, 432, "Venlo", "#2375d8", 5);
 
-
 FlightCoordinator1.draw_point(65, 98, "Texel", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(459, 97, "Winschoten", "#2375d8", 5);
-
 
 FlightCoordinator1.draw_point(95, 390, "Hoeven", "#2375d8", 5);
 
 FlightCoordinator1.draw_point(31, 410, "Middelburg", "#2375d8", 5);
 
 
-
-
-
 //FlightCoordinator1.find_location([95,255]);
 
-// FlightCoordinator1.draw_path([95, 255],[137, 293]);
+// FlightCoordinator1.draw_path([95, 255],[315, 293]);
 
 // FlightCoordinator1.circuit_star_model([95, 255], [315,293],[137, 293], [55,325], [55, 370], [95,390], [31,410]);
 
@@ -1470,6 +1368,9 @@ FlightCoordinator1.draw_point(31, 410, "Middelburg", "#2375d8", 5);
 // FlightCoordinator1.set_distance_and_time([55,370], [95,390], 39, 33 + "'", 16, "start");
 
 // FlightCoordinator1.set_distance_and_time([95,390], [31,410], 86.6, 1.5, -16, "start");
+  
+  
+  
 
 FlightCoordinator1.draw_circuit([[95,255],[315,293],108, 1.20,27, "center"],
 
@@ -1488,14 +1389,9 @@ FlightCoordinator1.draw_circuit([[95,255],[315,293],108, 1.20,27, "center"],
     );
 
 
-
 </script>
 
 
-  
-  
-  
-
 </body>
+  
 </html>
-
