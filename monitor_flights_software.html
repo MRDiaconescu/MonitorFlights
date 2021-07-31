@@ -1189,7 +1189,7 @@ if ((arg2[0] == FlightCoordinator1.coordinates[item][0]) && (arg2[1] == FlightCo
 }},
   
 
-draw_circuit : { value :  function(arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
+draw_circuit_star_model : { value :  function(arg1, arg2, arg3, arg4, arg5, arg6, arg7) {
 
 FlightCoordinator1.set_distance_and_time(arg1[0], arg1[1], arg1[2], arg1[3], arg1[4], 
   arg1[5], arg1[6]);
@@ -1336,7 +1336,7 @@ FlightCoordinator1.draw_point(31, 410, "Middelburg", "#2375d8", 5);
 
   
 
-FlightCoordinator1.draw_circuit([[95,255],[315,293],108, 1.20,27, "center"],
+FlightCoordinator1.draw_circuit_star_model([[95,255],[315,293],108, 1.20,27, "center"],
 
     [[315,293], [137,293], 82, 1.2, 16, "center"],
 
