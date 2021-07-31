@@ -1213,7 +1213,168 @@ FlightCoordinator1.set_distance_and_time(arg7[0], arg7[1], arg7[2], arg7[3], arg
     arg7[5], arg7[6]);
 
 
-}}
+}},
+  
+  
+  
+
+circuit_infinite_model : { value : function(arg1, arg2, arg3, arg4, arg5, arg6, arg7,arg8, arg9, arg10){
+
+FlightCoordinator1.find_location(arg1);
+
+FlightCoordinator1.find_location(arg2);
+
+FlightCoordinator1.find_location(arg3);
+
+FlightCoordinator1.find_location(arg4);
+
+FlightCoordinator1.find_location(arg5);
+
+FlightCoordinator1.find_location(arg6);
+
+FlightCoordinator1.find_location(arg7);
+
+FlightCoordinator1.find_location(arg8);
+
+FlightCoordinator1.find_location(arg9);
+
+FlightCoordinator1.find_location(arg10);
+
+FlightCoordinator1.drawLines_f2(arg1[0], arg1[1], arg2[0], arg2[1]);
+
+FlightCoordinator1.drawLines_f2(arg2[0], arg2[1], arg3[0], arg3[1]);
+
+FlightCoordinator1.drawLines_f2(arg3[0], arg3[1], arg4[0], arg4[1]);
+
+FlightCoordinator1.drawLines_f2(arg4[0], arg4[1], arg5[0], arg5[1]);
+
+FlightCoordinator1.drawLines_f2(arg5[0], arg5[1], arg6[0], arg6[1]);
+
+FlightCoordinator1.drawLines_f2(arg6[0], arg6[1], arg7[0], arg7[1]);
+
+FlightCoordinator1.drawLines_f2(arg7[0], arg7[1], arg8[0], arg8[1]);
+
+FlightCoordinator1.drawLines_f2(arg8[0], arg8[1], arg9[0], arg9[1]);
+
+FlightCoordinator1.drawLines_f2(arg9[0], arg9[1], arg10[0], arg10[1]);
+   
+    
+    
+    
+
+var vertex1 = new Node(arg1);
+
+var vertex2 = new Node(arg2);
+
+var vertex3 = new Node(arg3);
+
+var vertex4 = new Node(arg4);
+
+var vertex5 = new Node(arg5);
+
+var vertex6 = new Node(arg6);
+
+var vertex7 = new Node(arg7);
+
+var vertex8 = new Node(arg8);
+
+var vertex9 = new Node(arg9);
+
+var vertex10 = new Node(arg10);
+
+  
+var TiedLinkedLists25 =  new TiedLinkedLists_setter_f1(new TiedLinkedListsClass_var1, TiedLinkedLists.infinite_model, TiedLinkedLists.print_the_linked_list_infinite_model, TiedLinkedLists.getter, TiedLinkedListsClass_var1.setter); 
+
+
+
+TiedLinkedLists25.llist.create_llist(vertex1);
+
+TiedLinkedLists25.llist.create_llist(vertex2);
+
+TiedLinkedLists25.llist.create_llist(vertex3);
+
+TiedLinkedLists25.llist.create_llist(vertex4);
+
+TiedLinkedLists25.llist.create_llist(vertex5);
+
+
+
+var TiedLinkedLists27 =  new TiedLinkedLists_setter_f1(new TiedLinkedListsClass_var1, TiedLinkedLists.infinite_model, TiedLinkedLists.print_the_linked_list_infinite_model, TiedLinkedLists.getter, TiedLinkedListsClass_var1.setter);
+
+
+TiedLinkedLists27.llist.create_llist(vertex6);
+
+TiedLinkedLists27.llist.create_llist(vertex7);
+
+TiedLinkedLists27.llist.create_llist(vertex8);
+
+TiedLinkedLists27.llist.create_llist(vertex9);
+
+TiedLinkedLists27.llist.create_llist(vertex10);
+
+TiedLinkedLists25.llist.f1(TiedLinkedLists27.llist);
+
+
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.data[0], TiedLinkedLists25.llist.head.data[1], TiedLinkedLists25.llist.head.next.data[0], TiedLinkedLists25.llist.head.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.data[0], TiedLinkedLists25.llist.head.next.data[1], TiedLinkedLists25.llist.head.next.next.data[0], TiedLinkedLists25.llist.head.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.data[0], TiedLinkedLists25.llist.head.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.data[1]);
+
+FlightCoordinator1.drawLines_f1(TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.data[1], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.next.data[0], TiedLinkedLists25.llist.head.next.next.next.next.next.next.next.next.next.data[1]);
+
+
+
+  }},
+
+draw_circuit_infinite_model : { value:function(arg1, arg2, arg3, arg4, arg5, arg6, arg7, 
+    arg8, arg9, arg10) {
+
+FlightCoordinator1.set_distance_and_time(arg1[0], arg1[1], arg1[2], arg1[3], arg1[4], 
+  arg1[5], arg1[6]);
+
+FlightCoordinator1.set_distance_and_time(arg2[0], arg2[1], arg2[2], arg2[3], arg2[4],
+  arg2[5], arg2[6]);
+
+FlightCoordinator1.set_distance_and_time(arg3[0], arg3[1], arg3[2], arg3[3], arg3[4],
+  arg3[5], arg3[6]);
+
+FlightCoordinator1.set_distance_and_time(arg4[0], arg4[1], arg4[2], arg4[3], arg4[4],
+   arg4[5], arg4[6]);
+
+FlightCoordinator1.set_distance_and_time(arg5[0], arg5[1], arg5[2], arg5[3], arg5[4],
+  arg5[5], arg5[6]);
+
+FlightCoordinator1.set_distance_and_time(arg6[0], arg6[1], arg6[2], arg6[3], arg6[4],
+   arg6[5], arg6[6]);
+
+FlightCoordinator1.set_distance_and_time(arg7[0], arg7[1], arg7[2], arg7[3], arg7[4],
+    arg7[5], arg7[6]);
+
+FlightCoordinator1.set_distance_and_time(arg8[0], arg8[1], arg8[2], arg8[3], arg8[4],
+    arg8[5], arg8[6]);
+
+FlightCoordinator1.set_distance_and_time(arg9[0], arg9[1], arg9[2], arg9[3], arg9[4],
+    arg9[5], arg9[6]);
+
+FlightCoordinator1.set_distance_and_time(arg10[0], arg10[1], arg10[2], arg10[3], arg10[4],
+    arg10[5], arg10[6]);
+
+
+ }
+}
+
 
 });
 
@@ -1352,7 +1513,41 @@ FlightCoordinator1.draw_circuit_star_model([[95,255],[315,293],108, 1.20,27, "ce
 
     );
 
+  
+  
+//FlightCoordinator1.circuit_infinite_model([65, 98], [443,136], [95, 255], [315,293], [225, 331], [137, 293], [55,325], [55, 370], [95,390], [31,410]);
 
+
+
+ FlightCoordinator1.draw_circuit_infinite_model(
+
+    [[65, 98], [443,136], 208, 3.12, 17, "right"],
+
+    [[443,136], [95, 255], 212, 2.17, 17, "start"],
+
+    [[95,255],[315,293],108, 1.20,27, "center"],
+
+    [[315,293], [225, 331], 43.7, 40 + "'", -13,  "start"],
+
+    [[315,293], [137,293], 82, 1.2, 16, "center"],
+
+    [[137,293], [55,325], 77.9, 1, 16, "start"],
+
+    [[55,325], [55,370], 33.2, 32 + "'", 16, "start"],
+
+    [[55,370], [95,390], 39, 33 + "'", 16, "start"],
+
+    [[55,370], [95,390], 39, 33 + "'", 16, "start"],
+
+    [[95,390], [31,410], 86.6, 1.5, -16, "start"]
+
+  
+  
+    );
+
+  
+  
+  
 </script>
 
 
